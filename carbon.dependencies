@@ -1,8 +1,14 @@
 [
   {
+    "remote"     : "carbon",
+    "repository": "CarbonROM/android_kernel_xiaomi_mocha",
+    "target_path": "kernel/xiaomi/mocha",
+    "revision"   : "cr-5.1"
+  },
+  {
     "remote"     : "lineage",
     "repository": "LineageOS/android_hardware_nvidia_power",
     "target_path": "hardware/nvidia/power",
     "revision"   : "cm-14.1"
-  },
+  }
 ]
