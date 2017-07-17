@@ -13,7 +13,21 @@
 # limitations under the License.
 
 ##########################
+
+# SysFs
+
+# phs sysfs
+/sys/devices/virtual/misc/tegra-throughput/fps			u:object_r:sysfs_throughput:s0
+/sys/devices/virtual/misc/tegra-throughput/framecount		u:object_r:sysfs_throughput:s0
+
 # Devices
+
+/dev/ttyTHS2				u:object_r:hci_attach_dev:s0
+/dev/ttyTHS3				u:object_r:hci_attach_dev:s0
+/dev/mmcblk0p26              u:object_r:conn_init_exec:s0
+
+# CPU Freq
+/dev/constraint_cpu_freq			u:object_r:cpu_freq:s0
 
 # GPU
 /dev/nvhost-as-gpu			u:object_r:gpu_device:s0
@@ -29,6 +43,7 @@
 # camera devices
 /dev/camera.pcl				u:object_r:camera_device:s0
 /dev/imx179				u:object_r:camera_device:s0
+/dev/ov5693			u:object_r:camera_device:s0
 /dev/nvhost-ctrl-vi.*			u:object_r:camera_device:s0
 /dev/nvhost-vi.*			u:object_r:camera_device:s0
 /dev/nvhost-ctrl-isp.*			u:object_r:camera_device:s0
@@ -67,9 +82,13 @@
 #############################
 # System files
 
+/system/bin/conn_init              u:object_r:conn_init_exec:s0
+
 #############################
 # Data files
 
+# surfaceflinger 
+/data/data/surfaceflinger(/.*)?			u:object_r:surfaceflinger_fc:s0
 # tlk data folder
 /data/tlk(/.*)?				u:object_r:tee_data_file:s0
 # tlk ss data folder
