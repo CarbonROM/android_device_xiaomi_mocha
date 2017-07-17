@@ -3,4 +3,6 @@ allow init kernel:system module_request;
 allow init pstorefs:dir mounton;
 allow init rootfs:lnk_file setattr;
 allow init tmpfs:lnk_file create;
+allow init media_rw_data_file:blk_file getattr;
+allow init media_rw_data_file:chr_file getattr;
 

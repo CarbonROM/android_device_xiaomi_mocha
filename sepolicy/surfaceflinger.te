@@ -43,4 +43,6 @@ allow surfaceflinger self:capability sys_nice;
 allow surfaceflinger kernel:system module_request;
 allow surfaceflinger system_data_file:dir { add_name remove_name write };
 allow surfaceflinger system_data_file:sock_file { create setattr unlink };
+allow surfaceflinger surfaceflinger_fc:dir { read create open };
+allow surfaceflinger surfaceflinger_fc:file { write lock create open append };
 
