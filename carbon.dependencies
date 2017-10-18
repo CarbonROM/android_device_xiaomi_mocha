@@ -10,5 +10,11 @@
     "repository": "LineageOS/android_hardware_nvidia_power",
     "target_path": "hardware/nvidia/power",
     "revision"   : "cm-14.1"
-  }
+  },
+ {
+   "remote"     : "lineage",	
+   "repository": "LineageOS/android_hardware_broadcom_fm",
+   "target_path": "hardware/broadcom/fm"
+   "revision"   : "cm-14.1"
+ }
 ]
