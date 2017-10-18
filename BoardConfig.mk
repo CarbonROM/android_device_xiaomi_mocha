@@ -77,9 +77,12 @@ BOARD_HAVE_BCM_FM := true
 USE_OPENGL_RENDERER := true
 BOARD_DISABLE_TRIPLE_BUFFERED_DISPLAY_SURFACES := true
 
-#Camera
+# Camera
 TARGET_HAS_LEGACY_CAMERA_HAL1 := true
 TARGET_NEEDS_PLATFORM_TEXT_RELOCATIONS := true
+
+# Force Shim libs
+LINKER_FORCED_SHIM_LIBS := /system/vendor/lib/libnvomxadaptor.so|libmocha_omx.so:/system/lib/hw/camera.vendor.tegra.so|libmocha_camera.so:/system/lib/hw/camera.vendor.tegra.so|libmocha_libc.so
 
 # CMHW
 BOARD_USES_CYANOGEN_HARDWARE := true
