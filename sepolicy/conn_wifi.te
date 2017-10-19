@@ -7,4 +7,8 @@ allow conn_wifi property_socket:sock_file write;
 allow conn_wifi sysfs:file { open read write };
 allow conn_wifi bluetooth_prop:property_service set;
 allow conn_wifi conn_init_exec:file entrypoint;
+allow conn_wifi conn_init_dev:blk_file { open read write };
+allow conn_wifi conn_init_exec:file { getattr read };
+allow conn_wifi block_device:dir search;
+
 

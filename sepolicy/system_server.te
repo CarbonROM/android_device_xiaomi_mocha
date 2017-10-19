@@ -1,4 +1,5 @@
 allow system_server shell_exec:file { execute execute_no_trans getattr open read };
 allow system_server cpu_freq:chr_file { read write };
 allow system_server cpu_freq:chr_file open;
+allow system_server dev_throughput:chr_file { ioctl open read write };
 

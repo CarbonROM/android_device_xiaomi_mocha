@@ -48,9 +48,18 @@ type cpc_device, dev_type;
 # /dev/touch
 type touch_device, dev_type;
 
+# Bluetooth device
+type bt_device, dev_type;
+
 # RP3 partition
 type factoryconfig_block_device, dev_type;
 
+#/dev/tegra-throughput
+type dev_throughput, dev_type;
+
 # /dev/cy8c-led-boot
 type cy8c_device, dev_type;
+
+# /dev/block/mmcblk0p15
+type conn_init_dev, dev_type;
 

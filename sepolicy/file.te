@@ -117,6 +117,9 @@ type sysfs_nvi2c, fs_type, sysfs_type, mlstrustedobject;
 type cvc_data_file, file_type, data_file_type;
 type sysfs_cvc, fs_type, sysfs_type;
 
+# /data/nvcam(/.*)
+type cam_data_file, file_type, data_file_type;
+
 # /sys/module/tcp_output/parameters
 type sysfs_tcp_window_divisor, fs_type, sysfs_type;
 
@@ -134,6 +137,10 @@ type sysfs_touch_log, fs_type, sysfs_type;
 
 # Filesystem type CIFS
 type cifs, sdcard_type, fs_type, mlstrustedobject;
+
+# BRCM BT FM
+type brcm_ldisc_sysfs, sysfs_type, fs_type;
+type brcm_uim_exec, exec_type, file_type;
 
 # /vendor/oem/media
 type oem_media_file, file_type;

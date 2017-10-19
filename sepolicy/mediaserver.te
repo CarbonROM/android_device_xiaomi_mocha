@@ -41,4 +41,10 @@ allow mediaserver kernel:system module_request;
 allow mediaserver system_data_file:file open;
 allow mediaserver system_file:file execmod;
 allow mediaserver sysfs_wake_lock:file { read write open };
+allow mediaserver cam_data_file:dir { add_name write };
+allow mediaserver cam_data_file:file { create write };
+allow mediaserver cam_data_file:file { getattr open read };
+allow mediaserver cam_data_file:dir search;
+
+
 

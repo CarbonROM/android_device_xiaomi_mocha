@@ -5,4 +5,8 @@ allow init rootfs:lnk_file setattr;
 allow init tmpfs:lnk_file create;
 allow init media_rw_data_file:blk_file getattr;
 allow init media_rw_data_file:chr_file getattr;
+allow init conn_init_exec:file { execute getattr open read };
+allow init uim:process { noatsecure rlimitinh siginh transition };
+allow init brcm_uim_exec:file { execute getattr read open };
+allow init brcm_ldisc_sysfs:lnk_file { read };
 

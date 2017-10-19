@@ -1,0 +1,2 @@
+allow system_app dev_throughput:chr_file { ioctl open read write };
+﻿
